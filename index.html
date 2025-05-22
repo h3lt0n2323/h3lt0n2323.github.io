@@ -30,53 +30,53 @@
 
     <script>
         const escala = {
-  "2025-01-01": "Turma B",
-  "2025-01-02": "Turma B",
-  "2025-01-03": "Turma B",
-  "2025-01-04": "Turma A",
-  "2025-01-05": "Turma A",
-  "2025-01-06": "Turma A",
-  "2025-01-07": "Turma B",
-  "2025-01-08": "Turma B",
-  "2025-01-09": "Turma B",
-  "2025-01-10": "Turma A",
-  "2025-01-11": "Turma A",
-  "2025-01-12": "Turma A",
-  "2025-01-13": "Turma B",
-  "2025-01-14": "Turma B",
-  "2025-01-15": "Turma B",
-  "2025-01-16": "Turma A",
-  "2025-01-17": "Turma A",
-  "2025-01-18": "Turma A",
-  "2025-01-19": "Turma B",
-  "2025-01-20": "Turma B",
-  "2025-01-21": "Turma B",
-  "2025-01-22": "Turma A",
-  "2025-01-23": "Turma A",
-  "2025-01-24": "Turma A",
-  "2025-01-25": "Turma B",
-  "2025-01-26": "Turma B",
-  "2025-01-27": "Turma B",
-  "2025-01-28": "Turma A",
-  "2025-01-29": "Turma A",
-  "2025-01-30": "Turma A",
-  "2025-01-31": "Turma B"
-};
+            "2025-01-01": "Turma B",
+            "2025-01-02": "Turma B",
+            "2025-01-03": "Turma B",
+            "2025-01-04": "Turma A",
+            "2025-01-05": "Turma A",
+            "2025-01-06": "Turma A",
+            "2025-01-07": "Turma B",
+            "2025-01-08": "Turma B",
+            "2025-01-09": "Turma B",
+            "2025-01-10": "Turma A",
+            "2025-01-11": "Turma A",
+            "2025-01-12": "Turma A",
+            "2025-01-13": "Turma B",
+            "2025-01-14": "Turma B",
+            "2025-01-15": "Turma B",
+            "2025-01-16": "Turma A",
+            "2025-01-17": "Turma A",
+            "2025-01-18": "Turma A",
+            "2025-01-19": "Turma B",
+            "2025-01-20": "Turma B",
+            "2025-01-21": "Turma B",
+            "2025-01-22": "Turma A",
+            "2025-01-23": "Turma A",
+            "2025-01-24": "Turma A",
+            "2025-01-25": "Turma B",
+            "2025-01-26": "Turma B",
+            "2025-01-27": "Turma B",
+            "2025-01-28": "Turma A",
+            "2025-01-29": "Turma A",
+            "2025-01-30": "Turma A",
+            "2025-01-31": "Turma B"
+        };
 
-function verificarTurno() {
-    const input = document.getElementById("data").value;
-    if (!input) {
-      document.getElementById("resultado").innerText = "Por favor, selecione uma data.";
-      return;
-    }
-    const dataFormatada = new Date(input).toISOString().split('T')[0];
-    const resultado = escala[dataFormatada];
-    if (resultado) {
-      document.getElementById("resultado").innerText = No dia ${dataFormatada}, está de turno a ${resultado};
-    } else {
-      document.getElementById("resultado").innerText = "Não há dados disponíveis para esta data.";
-    }
-  }
-</script>
+        function verificarTurno() {
+            const input = document.getElementById("data").value;
+            if (!input) {
+                document.getElementById("resultado").innerText = "Por favor, selecione uma data.";
+                return;
+            }
+            const dataFormatada = new Date(input).toISOString().split('T')[0];
+            const resultado = escala[dataFormatada];
+            if (resultado) {
+                document.getElementById("resultado").innerText = No dia ${dataFormatada}, está de turno a ${resultado};
+            } else {
+                document.getElementById("resultado").innerText = "Não há dados disponíveis para esta data.";
+            }
+        }
+    </script>
 </body>
-</html>
+</html
