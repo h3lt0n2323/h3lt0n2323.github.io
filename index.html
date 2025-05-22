@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -29,7 +29,6 @@
     <p id="resultado"></p>
 
     <script>
-        // AQUI FICA A ESCALA BASEADA NA SUA PLANILHA
         const escala = {
             "2025-01-01": "Turma B",
             "2025-01-02": "Turma B",
@@ -37,7 +36,7 @@
             "2025-01-04": "Turma A",
             "2025-01-05": "Turma A",
             "2025-01-06": "Turma A",
-            // Coloque o resto das datas aqui conforme sua planilha...
+            // Adicione o resto das datas conforme sua planilha
         };
 
         function verificarTurno() {
@@ -46,9 +45,10 @@
                 document.getElementById("resultado").innerText = "Por favor, selecione uma data.";
                 return;
             }
-            const resultado = escala[input];
+            const dataFormatada = new Date(input).toISOString().split('T')[0];
+            const resultado = escala[dataFormatada];
             if (resultado) {
-                document.getElementById("resultado").innerText = No dia ${input}, está de turno a ${resultado};
+                document.getElementById("resultado").innerText = No dia ${dataFormatada}, está de turno a ${resultado};
             } else {
                 document.getElementById("resultado").innerText = "Não há dados disponíveis para esta data.";
             }
