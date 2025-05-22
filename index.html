@@ -63,20 +63,20 @@
   "2025-01-31": "Turma B"
 };
 
-        function verificarTurno() {
-            const input = document.getElementById("data").value;
-            if (!input) {
-                document.getElementById("resultado").innerText = "Por favor, selecione uma data.";
-                return;
-            }
-            const dataFormatada = new Date(input).toISOString().split('T')[0];
-            const resultado = escala[dataFormatada];
-            if (resultado) {
-                document.getElementById("resultado").innerText = No dia ${dataFormatada}, está de turno a ${resultado};
-            } else {
-                document.getElementById("resultado").innerText = "Não há dados disponíveis para esta data.";
-            }
-        }
-    </script>
+function verificarTurno() {
+    const input = document.getElementById("data").value;
+    if (!input) {
+      document.getElementById("resultado").innerText = "Por favor, selecione uma data.";
+      return;
+    }
+    const dataFormatada = new Date(input).toISOString().split('T')[0];
+    const resultado = escala[dataFormatada];
+    if (resultado) {
+      document.getElementById("resultado").innerText = No dia ${dataFormatada}, está de turno a ${resultado};
+    } else {
+      document.getElementById("resultado").innerText = "Não há dados disponíveis para esta data.";
+    }
+  }
+</script>
 </body>
 </html>
