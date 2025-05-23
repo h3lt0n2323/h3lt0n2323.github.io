@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Escala 3x3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            background-color: #f2f2f2;
+            font-size: 22px;
+        }
+        h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+        input, button {
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+        }
+        #resultado {
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Descubra quem está no turno 3x3</h2>
+    <label for="data">Escolha a data:</label><br>
+    <input type="date" id="data" />
+    <button onclick="verificarTurno()">Ver Turno</button>
+    <p id="resultado"></p>
+
+    <script>
+= {
+            "2025-01-01": "Turma B",
+            "2025-01-02": "Turma B",
+            "2025-01-03": "Turma B",
+            "2025-01-04": "Turma A",
+            "2025-01-05": "Turma A",
+            "2025-01-06": "Turma A"
+            //
+            // "YYYY-MM-DD": "Turma A" ou "Turma B"
+        };
+
+        function verificarTurno() {
+            const input = document.getElementById("data").value;
+            if (!input) {
+                document.getElementById("resultado").innerText = "Por favor, selecione uma data.";
+                return;
+            }
+
+            const resultado = escala[input];
+            if (resultado) {
+                document.getElementById("resultado").innerText = `No dia ${input}, está de turno a ${resultado}`;
+            } else {
+                document.getElementById("resultado").innerText = "Não há dados disponíveis para esta data.";
+            }
+        }
+    </script>
+</body>
+</html>
